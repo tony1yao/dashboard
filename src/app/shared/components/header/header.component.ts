@@ -16,6 +16,13 @@ export class HeaderComponent implements OnInit {
 
   toggleSideBar(): void {
     this.onToggleSideBar.emit(null);
+
+    //This is used to refresh the chart after each load
+    setTimeout(() => {
+      window.dispatchEvent(
+        new Event('resize')
+      );
+    }, 300);
   }
 
 }

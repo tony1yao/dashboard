@@ -14,6 +14,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatListModule } from '@angular/material/list';
 import { AreaComponent } from './widgets/area/area.component';
 import { HighchartsChartModule } from 'highcharts-angular';
+import { MatCardModule } from '@angular/material/card';
+import { CardComponent } from './widgets/card/card.component';
+import { PieComponent } from './widgets/pie/pie.component'
 
 
 @NgModule({
@@ -21,7 +24,9 @@ import { HighchartsChartModule } from 'highcharts-angular';
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
-    AreaComponent
+    AreaComponent,
+    CardComponent,
+    PieComponent
   ],
   imports: [
     CommonModule,
@@ -34,13 +39,16 @@ import { HighchartsChartModule } from 'highcharts-angular';
     MatMenuModule,
     FlexLayoutModule,
     MatListModule,
-    HighchartsChartModule
+    HighchartsChartModule,
+    MatCardModule
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
     AreaComponent,
+    CardComponent,
+    PieComponent,
     RouterModule,
     MatSidenavModule,
     MatDividerModule,
@@ -50,7 +58,8 @@ import { HighchartsChartModule } from 'highcharts-angular';
     MatMenuModule,
     MatListModule,
     FlexLayoutModule,
-    HighchartsChartModule
+    HighchartsChartModule,
+    MatCardModule
   ]
 })
 export class SharedModule { }
